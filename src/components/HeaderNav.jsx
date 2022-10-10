@@ -12,7 +12,7 @@ function HeaderNav() {
     const [ showNav , setShowNav ] = useState(false)
     const [ showDrop , setShowDrop ] = useState(false)
   return (
-    <div className='w-full bg-header flex  justify-between items-center lg:px-12 md:px-6 px-3 text-white  sticky top-0 '>
+    <div className='w-full bg-header flex  justify-between items-center lg:px-12 md:px-6 px-3 text-white  sticky top-0 z-50'>
         
         <p className='hidden md:block'>
             <Link to='/'><img src={logo} alt='logo'  className=' w-16 h-12'/></Link>
@@ -36,6 +36,23 @@ function HeaderNav() {
             <li>
                 <Link to='/'>
                     <span>Account</span>
+                </Link>
+            </li>
+
+            <li>
+                <Link to='/home'>
+                    <span>Books</span>
+                </Link>
+            </li>
+
+            <li>
+                <Link to='/home/in-hand'>
+                    <span>In-hand</span>
+                </Link>
+            </li>
+            <li>
+                <Link to='/home/history'>
+                    <span>book-history</span>
                 </Link>
             </li>
         </ul>
@@ -80,7 +97,7 @@ function HeaderNav() {
             </li>
         </ul>
 
-        <ul className={`${showNav ? "fixed" : "hidden"} left-0 top-0 bottom-0 w-[250px] bg-white flex flex-col  gap-8 px-6 py-6 text-header_bg_text border`}>
+        <ul className={`${showNav ? "fixed" : "hidden"} left-0 top-0 bottom-0 w-[250px] z-50 bg-red-500 flex flex-col  gap-8 px-6 py-6 text-header_bg_text border`}>
 
             <li>
                 <p onClick={()=> setShowNav(false)}

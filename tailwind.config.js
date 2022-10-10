@@ -15,7 +15,8 @@ module.exports = {
         header_bg_text: '#0c2139',
       },
       backgroundColor:{
-        header: '#0c2139',  
+        header: '#0c2139', 
+        header_light : '#eff3f6', 
       },
     },
   },
